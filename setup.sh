@@ -69,7 +69,7 @@ asdf plugin add nodejs
 
 asdf install java latest
 asdf install python latest
-asdf install nodejs latest
+NODEJS_CHECK_SIGNATURES=no asdf install nodejs latest
 
 asdf global java latest
 asdf global python latest
