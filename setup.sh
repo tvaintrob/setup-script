@@ -21,6 +21,7 @@ git config --global user.email tvaintrob@gmail.com
 
 # installing cli tools
 tools=(
+    z
     jq
     bat
     fzf

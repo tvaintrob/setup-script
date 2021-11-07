@@ -38,3 +38,5 @@ if type compdef &>/dev/null; then
 fi
 
 ###-end-ionic-completion-###
+
+. /usr/local/etc/profile.d/z.sh
