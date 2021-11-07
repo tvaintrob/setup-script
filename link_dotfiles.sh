@@ -7,7 +7,7 @@ ln -s "$SCRIPTPATH/neovim" $HOME/.config/nvim
 
 # link ZSH config
 ln -s "$SCRIPTPATH/zsh/zshrc" $HOME/.zshrc
-ln -s "$SCRIPTPATH/zsh" $ZSH_CUSTOM
+ln -s "$SCRIPTPATH/zsh/" $ZSH_CUSTOM
 
 # link tmux config
 ln -s "$SCRIPTPATH/tmux/tmux.conf" $HOME/.tmux.conf

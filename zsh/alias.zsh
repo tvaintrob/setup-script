@@ -1,5 +1,4 @@
 alias vim='nvim'
-# alias vimrc='vim ~/.config/nvim/init.vim'
 alias vimrc='vim ~/.config/nvim/init.lua'
 alias ls='ls --group-directories-first --color=always'
 alias lg='lazygit'
@@ -11,4 +10,4 @@ alias svc="kubectl get svc"
 
 alias tf="terraform"
 
-source $HOME/code/scripts/install.sh
+# source $HOME/code/scripts/install.sh
