@@ -10,11 +10,18 @@ asdf plugin add python
 asdf plugin add nodejs
 
 asdf install java latest
+NODEJS_CHECK_SIGNATURES=no asdf install nodejs lts
+
+# fixing python install for mac
+brew install bzip2 lbzip2 lzlib openssl zlib
+
+export LDFLAGS="-L/usr/local/opt/bzip2/lib -L/usr/local/opt/zlib/lib -L/usr/local/opt/openssl@1.1/lib"
+export CFLAGS="-I/usr/local/opt/bzip2/include -I/usr/local/opt/zlib/include -I/usr/local/opt/openssl@1.1/include -I$(xcrun --show-sdk-path)/usr/include -Wno-implicit-function-declaration" 
+asdf install python 3.6.13
 asdf install python latest
-NODEJS_CHECK_SIGNATURES=no asdf install nodejs latest
 
 asdf global java latest
-asdf global python latest
-asdf global nodejs latest
+asdf global python latest 3.6.13 system
+asdf global nodejs lts
 
 pipx ensurepath

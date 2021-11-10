@@ -1,5 +1,5 @@
 
-export EPSAGON_BACKEND=$HOME/code/epsagon/work/epsagon-backend
+export EPSAGON_BACKEND=$HOME/projects/epsagon-backend
 export PYTHONPATH=$EPSAGON_BACKEND/user_logs/:$PYTHONPATH
 export PYTHONPATH=$EPSAGON_BACKEND/architecture/:$PYTHONPATH
 export PYTHONPATH=$EPSAGON_BACKEND/aggregated_metrics/:$PYTHONPATH
