@@ -20,10 +20,7 @@ formatter.setup({
 		["typescript.tsx"] = { format_configs.prettier_d },
 
 		lua = { format_configs.stylua },
-		python = {
-			-- format_configs.isort,
-			format_configs.black,
-		},
+		python = { format_configs.isort, format_configs.black },
 	},
 })
 
@@ -36,7 +33,12 @@ function _G.formatters()
 end
 
 -- formatter keybindings
-vim.api.nvim_set_keymap("n", "<leader>f", ":lua format_file()<cr>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap(
+	"n",
+	"<leader>f",
+	":lua format_file()<cr>",
+	{ noremap = true, silent = true }
+)
 
 -- setup auto formatting for supported filetypes
 vim.api.nvim_command([[

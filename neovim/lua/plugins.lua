@@ -28,9 +28,6 @@ local function setup_plugins(use)
 
 	-- themes
 	use({ "projekt0n/github-nvim-theme" })
-	-- use({ "rafamadriz/neon" })
-	-- use({ "marko-cerovac/material.nvim" })
-	-- use({ "folke/tokyonight.nvim" })
 
 	-- file viewer
 	use({ "kyazdani42/nvim-web-devicons" })
@@ -58,17 +55,6 @@ local function setup_plugins(use)
 		run = ":TSUpdate",
 		config = [[require('configs/treesitter')]],
 	})
-	-- use({
-	-- 	"th3whit3wolf/onebuddy",
-	-- 	config = [[require('colorbuddy').colorscheme('onebuddy')]],
-	-- 	requires = { "tjdevries/colorbuddy.vim" },
-	-- })
-
-	-- use({
-	-- 	"tjdevries/gruvbuddy.nvim",
-	-- 	config = [[require('colorbuddy').colorscheme('gruvbuddy')]],
-	-- 	requires = { "tjdevries/colorbuddy.vim" },
-	-- })
 
 	-- telescope
 	use({ "junegunn/fzf.vim", requires = { { "junegunn/fzf" } } })
@@ -94,8 +80,9 @@ local function setup_plugins(use)
 	use({
 		"neovim/nvim-lspconfig",
 		event = { "BufNew", "BufRead", "BufWinEnter" },
-		config = [[require('configs/lsp')]],
+		config = [[require('configs/lsp_conf')]],
 		requires = {
+			{ "folke/lua-dev.nvim" },
 			{ "ray-x/lsp_signature.nvim" },
 			{ "williamboman/nvim-lsp-installer" },
 		},

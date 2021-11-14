@@ -44,6 +44,11 @@ vim.opt.splitbelow = true
 vim.opt.eadirection = "hor"
 
 vim.opt.completeopt = { "menu", "menuone", "noselect" }
+vim.opt.updatetime = 750
+
+vim.cmd(
+	[[autocmd CursorHold,CursorHoldI * lua vim.lsp.diagnostic.show_line_diagnostics({focusable=false, border="single"})]]
+)
 
 require("plugins")
 require("keymaps")
